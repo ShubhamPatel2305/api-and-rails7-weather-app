@@ -4,4 +4,9 @@
 
   <p> <%= @data["main"]["temp"] %> </p>
   <p> <%= @data["weather"].first["main"] %> </p>
+  <%# print today's date in format of 28Th July 2024 %>
+  <p> <%= Time.now.strftime("%d %b %Y") %> </p>
+  <%# also print current time in indian time zone just print time not date and timrzone%>
+
+  <p> <%= Time.now.in_time_zone("Asia/Kolkata").strftime("%H:%M:%S") %> </p>
 </div>
